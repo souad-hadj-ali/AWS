@@ -50,17 +50,17 @@ class Storage:
     def __init__(self):
         self.db = mysql.connector.connect(
             # ToDo
-            user='x',
-            passwd='x',
-            db='x',
-            host='x',
+            user='musa',
+            passwd='Candidature2021!',
+            db='musa',
+            host='musa.cralmzabuvdi.eu-west-3.rds.amazonaws.com',
             port=3306
         )
 
     def load(self):
         cur = self.db.cursor()
         # ToDo
-        cur.execute('''  ''')
+        cur.execute(''' select * from user;  ''')
         row = cur.fetchall()
         return row[0][1]
 
